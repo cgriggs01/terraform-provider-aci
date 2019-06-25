@@ -86,6 +86,7 @@ func Provider() terraform.ResourceProvider {
 			"aci_end_point_retention_policy":           resourceAciEndPointRetentionPolicy(),
 			"aci_attachable_access_entity_profile":     resourceAciAttachableAccessEntityProfile(),
 			"aci_vlan_encapsulationfor_vxlan_traffic":  resourceAciVlanEncapsulationforVxlanTraffic(),
+			"aci_l3_ext_subnet":                        resourceAciL3ExtSubnet(),
 		},
 
 		DataSourcesMap: map[string]*schema.Resource{
@@ -118,6 +119,7 @@ func Provider() terraform.ResourceProvider {
 			"aci_end_point_retention_policy":           dataSourceAciEndPointRetentionPolicy(),
 			"aci_attachable_access_entity_profile":     dataSourceAciAttachableAccessEntityProfile(),
 			"aci_vlan_encapsulationfor_vxlan_traffic":  dataSourceAciVlanEncapsulationforVxlanTraffic(),
+			"aci_l3_ext_subnet":                        dataSourceAciL3ExtSubnet(),
 		},
 
 		ConfigureFunc: configureClient,
